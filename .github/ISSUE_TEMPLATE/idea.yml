@@ -1,0 +1,42 @@
+name: Idea (Inbox)
+description: Quick capture for knowledge inbox
+title: "[Inbox] "
+labels: ["inbox"]
+body:
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - management
+        - finance
+        - strategy
+        - marketing
+        - sales
+        - org
+        - product
+        - ma
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: memo
+    attributes:
+      label: Memo (raw)
+      description: 箇条書きでOK。後で整形する前提。
+      placeholder: |
+        例:
+        - ビジネスにおける数字とは？
+        - 絶対だが状況で意味が変わる
+        - だから熱を込めて翻訳する
+    validations:
+      required: true
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags (comma separated)
+      placeholder: metrics, decision-making
+    validations:
+      required: false
